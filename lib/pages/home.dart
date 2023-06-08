@@ -1,6 +1,8 @@
 import 'package:admin/AppComponet/colors.dart';
+import 'package:admin/widget/Content.dart';
 import 'package:admin/widget/interoPage.dart';
 import 'package:admin/widget/navbar.dart';
+import 'package:admin/widget/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -22,13 +24,14 @@ class _HomeState extends State<Home> {
           children: [
             Container(
                 color: AppColors.blue,
-                // height: 650,
                 child: Column(
                   children: [
                     NavBar(),
                     InteroPage(),
                   ],
                 )),
+            View(),
+            Content()
           ],
         ),
       )),

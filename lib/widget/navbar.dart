@@ -2,7 +2,6 @@ import 'package:admin/AppComponet/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatefulWidget {
@@ -24,13 +23,13 @@ class _NavBarState extends State<NavBar> {
 
   Widget MobileNavbar() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20),
-      height: 70.h,
+      margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+      height: 70,
       child: Row(
         children: [
           InkWell(child: Icon(Icons.menu)),
           SizedBox(
-            width: 20.w,
+            width: 20,
           ),
           LogoText()
         ],
@@ -42,16 +41,17 @@ class _NavBarState extends State<NavBar> {
 
   Widget DesktopNevbar() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+      padding: EdgeInsets.only(left: 40, right: 40),
       height: 70,
       child: Row(
         children: [
           SizedBox(
-            width: 20.w,
+            width: 20,
           ),
           LogoText(),
           SizedBox(
-            width: 50.w,
+            width: 50,
           ),
           Expanded(
             child: Row(
@@ -71,15 +71,15 @@ class _NavBarState extends State<NavBar> {
                     child: Text(
                       "Login",
                       style: TextStyle(
-                          fontSize: 18.sp,
+                          fontSize: 20,
                           color: AppColors.primaryColor,
                           fontWeight: FontWeight.bold),
                     )),
                 SizedBox(
-                  width: 20.w,
+                  width: 20,
                 ),
                 SizedBox(
-                  height: 40.h,
+                  height: 50,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primaryColor,
@@ -90,7 +90,7 @@ class _NavBarState extends State<NavBar> {
                           Text(
                             "Join US ",
                             style: TextStyle(
-                                fontSize: 18.sp,
+                                fontSize: 20,
                                 color: AppColors.white,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -102,7 +102,7 @@ class _NavBarState extends State<NavBar> {
             ),
           ),
           SizedBox(
-            width: 40.w,
+            width: 40,
           ),
         ],
       ),
@@ -118,7 +118,7 @@ class _NavBarState extends State<NavBar> {
         child: Text(
           title,
           style: TextStyle(
-              fontSize: 18.sp,
+              fontSize: 20,
               color: AppColors.navbarText,
               fontWeight: FontWeight.w500),
         ),
@@ -133,7 +133,7 @@ class _NavBarState extends State<NavBar> {
         child: Text(
           "Brandname",
           style: TextStyle(
-              fontSize: 24.sp,
+              fontSize: 24,
               color: AppColors.black,
               fontWeight: FontWeight.w600),
         ),
